@@ -1,0 +1,20 @@
+{
+  "name": "thesis-project",
+  "version": "1.0.0",
+  "description": "Web application designed for people with disabilities for filling in forms using voice functionality",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Theologos Tsolovikos",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "uuid": "^8.3.2"
+  }
+}
