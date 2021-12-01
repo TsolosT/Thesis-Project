@@ -1,0 +1,172 @@
+<%- include ('../partials/header') %>
+
+<%- include ('../partials/nav') %>
+
+
+<div class="container  bg-dark mt-3 rounded-3 p-5  text-light" style="width:26rem;">
+    <h1 class="mb-4 h4 text-center">Συμπληρωσε την ΕΞΟΥΣΙΟΔΟΤΗΣΗ</h1>
+    <div class="stepwizard d-none">
+        <div class="stepwizard-row setup-panel ">
+            <div class="stepwizard-step col-xs-3"> 
+                <a href="#step-1" type="button" class="btn btn-info btn-circle">1</a>
+                <p><small>ΠΡΩΤΟ ΒΗΜΑ</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3"> 
+                <a href="#step-2" type="button" class="btn btn-outline-info bg-dark btn-circle" disabled="disabled">2</a>
+                <p><small>ΔΕΥΤΕΡΟ ΒΗΜΑ</small></p>
+            </div>
+            <div class="stepwizard-step col-xs-3"> 
+                <a href="#step-3" type="button" class="btn btn-outline-info  bg-dark  btn-circle" disabled="disabled">3</a>
+                <p><small>ΤΡΙΤΟ ΒΗΜΑ</small></p>
+            </div>
+        </div>
+    </div>
+     <form role="form" class="my-3">
+        <div class="panel panel-primary setup-content" id="step-1">
+            <div class="panel-heading">
+                 <h3 class="panel-title">ΒΗΜΑ 1ο</h3>
+            </div>
+            <div class="panel-body">
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>ΕΠΕΛΕΞΕ ΓΕΝΟΣ</option>
+                    <option value="1">Ο</option>
+                    <option value="2">Η</option>
+                  </select>
+                <div class="form-group my-3">
+                    <label class="control-label">ΟΝΟΜΑΤΕΠΟΝΥΜΟ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΟΝΟΜΑ ΠΑΤΕΡΑ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΟΝΟΜΑ ΜΗΤΕΡΑΣ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group mb-4">
+                    <label class="control-label">ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
+                </div>
+                <button class="btn btn-outline-info nextBtn float-end" type="button">ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
+            </div>
+        </div>
+        <div class="panel panel-primary setup-content" id="step-2">
+            <div class="panel-heading">
+                 <h3 class="panel-title">ΒΗΜΑ 2ο</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group my-3">
+                    <label class="control-label">ΤΟΠΟ ΓΕΝΝΗΣΗΣ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΟΔΟΣ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΚΑΤΟΙΚΟΣ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group mb-4">
+                    <label class="control-label">ΑΔΤ/ΔΙΑΒΑΤΗΡΙΟ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
+                </div>
+                <button class="btn btn-outline-info nextBtn float-end" type="button">ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
+            </div>
+        </div>
+        <div class="panel panel-primary setup-content" id="step-3">
+            <div class="panel-heading">
+                 <h3 class="panel-title">ΒΗΜΑ 3ο</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group my-3">
+                    <label class="control-label">ΕΚΔΟΘΗΚΕ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΑΠΟ ΤΟ </label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <button class="btn btn-outline-info nextBtn float-end" type="button"> ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
+            </div>
+        </div>
+        <!-- εξουσιοδοτω -->
+        <div class="panel panel-primary setup-content" id="step-4">
+            <div class="panel-heading">
+                    <h3 class="mb-4 h4 text-center">ΕΞΟΥΣΙΟΔΟΤΩ</h3>
+                 <h3 class="panel-title">ΒΗΜΑ 1ο</h3>
+            </div>
+            <div class="panel-body">
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>ΕΠΕΛΕΞΕ ΓΕΝΟΣ</option>
+                    <option value="1">Ο</option>
+                    <option value="2">Η</option>
+                  </select>
+                <div class="form-group my-3">
+                    <label class="control-label">ΟΝΟΜΑΤΕΠΟΝΥΜΟ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΟΝΟΜΑ ΠΑΤΕΡΑ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΟΝΟΜΑ ΜΗΤΕΡΑΣ </label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <button class="btn btn-outline-info nextBtn float-end" type="button"> ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
+            </div>
+        </div>
+        <div class="panel panel-primary setup-content" id="step-5">
+            <div class="panel-heading">
+                 <h3 class="panel-title">ΒΗΜΑ 2ο</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group my-3">
+                    <label class="control-label">ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΤΟΠΟΣ ΓΕΝΝΗΣΗΣ </label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΚΑΤΟΙΚΟΣ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΟΔΟΣ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <button class="btn btn-outline-info nextBtn float-end" type="button">ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
+            </div>
+        </div>
+        <div class="panel panel-primary setup-content" id="step-3">
+            <div class="panel-heading">
+                 <h3 class="panel-title">ΒΗΜΑ 3ο</h3>
+            </div>
+            <div class="panel-body">
+                <div class="form-group mb-4">
+                    <label class="control-label">ΑΔΤ/ΔΙΑΒΑΤΗΡΙΟ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter Last Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΕΚΔΟΘΗΚΕ</label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group my-3">
+                    <label class="control-label">ΑΠΟ ΤΟ </label>
+                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name" />
+                </div>
+                <div class="form-group mb-4">
+                    <label for="exampleFormControlTextarea1" class="form-label">ΔΗΛΩΝΩ ΟΤΙ:</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button class="btn btn-outline-info nextBtn float-end" type="submit">ΚΑΤΑΧΩΡΗΣΗ ΔΗΛΩΣΗΣ</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+ <%- include ('../partials/footer') %>
