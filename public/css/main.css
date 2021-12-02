@@ -90,3 +90,12 @@ footer hr{
     line-height: 1.428571429;
     border-radius: 15px;
 }
+/* Accesibility  */
+a.navbar-brand[tabindex="0"]:focus,
+a:focus,button:focus,
+input:focus,textarea:focus, a.navbar-brand[tabindex="0"]:focus-visible,
+a:focus-visible,button:focus-visible,
+input:focus-visible,textarea:focus-visible { 
+    outline: auto 5px -webkit-focus-ring-color; 
+    outline: 4px dashed #0dcaf0;
+  }
