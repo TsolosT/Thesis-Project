@@ -99,3 +99,11 @@ input:focus-visible,textarea:focus-visible {
     outline: auto 5px -webkit-focus-ring-color; 
     outline: 4px dashed #0dcaf0;
   }
+
+  /*  */
+  .no-browser-support {
+    display: none;
+    font-size: 1.2rem;
+    color: #e64427;
+    margin-top: 35px;
+}

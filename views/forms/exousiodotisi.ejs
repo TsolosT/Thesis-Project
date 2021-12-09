@@ -4,7 +4,11 @@
 
 
 <div class="container  bg-dark mt-3 rounded-3 p-5  text-light" style="width:26rem;">
-    <h1 class="mb-4 h4 text-center">Συμπληρωσε την ΕΞΟΥΣΙΟΔΟΤΗΣΗ</h1>
+    <div class="row">
+        <h3 class="no-browser-support" tabindex="0">Λυπούμαστε, το πρόγραμμα περιήγησής σας δεν υποστηρίζει το Web Speech API. Δοκιμάστε να ανοίξετε αυτήν την επίδειξη στο Google Chrome ή στο Microsoft Edge<h3>
+    </div>
+    <div class="form">
+        <h1 class="mb-4 h4 text-center">Συμπληρωσε την ΕΞΟΥΣΙΟΔΟΤΗΣΗ</h1>
     <div class="stepwizard d-none">
         <div class="stepwizard-row setup-panel ">
             <div class="stepwizard-step col-xs-3"> 
@@ -21,32 +25,32 @@
             </div>
         </div>
     </div>
-     <form role="form" class="my-3">
+     <form role="form" class="my-3" action="/exousiodotisi" method="post">
         <div class="panel panel-primary setup-content" id="step-1">
             <div class="panel-heading">
                  <h3 class="panel-title">ΒΗΜΑ 1ο</h3>
             </div>
             <div class="panel-body">
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg ΕΠΕΛΕΞΕ ΓΕΝΟΣ">
+                <select class="form-select form-select-lg mb-3" aria-label=" ΕΠΕΛΕΞΕ ΓΕΝΟΣ">
                     <option selected>ΕΠΕΛΕΞΕ ΓΕΝΟΣ</option>
                     <option value="male">Ο</option>
                     <option value="woman">Η</option>
                   </select>
                 <div class="form-group my-3">
                     <label for="fullName" class="control-label">ΟΝΟΜΑΤΕΠΟΝΥΜΟ</label>
-                    <input id="fullName" maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΣ ΓΕΩΡΓΙΟΥ" />
+                    <input id="fullName" name="fullName" maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΣ ΓΕΩΡΓΙΟΥ" />
                 </div>
                 <div class="form-group my-3">
-                    <label class="control-label">ΟΝΟΜΑ ΠΑΤΕΡΑ</label>
-                    <input maxlength="20" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ" />
+                    <label class="control-label" for="fathername">ΟΝΟΜΑ ΠΑΤΕΡΑ</label>
+                    <input name='fathername'  id="fathername" maxlength="20" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ" />
                 </div>
                 <div class="form-group my-3">
-                    <label for="mName" class="control-label">ΟΝΟΜΑ ΜΗΤΕΡΑΣ</label>
-                    <input id="mName" maxlength="20" type="text" required="required" class="form-control" placeholder="π.χ. ΜΑΡΙΑ" />
+                    <label for="mothername" class="control-label">ΟΝΟΜΑ ΜΗΤΕΡΑΣ</label>
+                    <input id="mothername" name="mothername" maxlength="20" type="text" required="required" class="form-control" placeholder="π.χ. ΜΑΡΙΑ" />
                 </div>
                 <div class="form-group mb-4">
-                    <label for="date" class="control-label">ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ</label>
-                    <input id="date" type="date" required="required" class="form-control" placeholder="DD/MM/YYYY" />
+                    <label for="bdate" class="control-label">ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ</label>
+                    <input id="bdate" name="bdate" type="date" required="required" class="form-control" placeholder="DD/MM/YYYY" />
                 </div>
                 <button class="btn btn-outline-info nextBtn float-end" type="button">ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
             </div>
@@ -58,19 +62,19 @@
             <div class="panel-body">
                 <div class="form-group my-3">
                     <label for="blocation" class="control-label">ΤΟΠΟ ΓΕΝΝΗΣΗΣ</label>
-                    <input id="blocation" maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΣ" />
+                    <input id="blocation" name="blocation" maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΣ" />
                 </div>
                 <div class="form-group my-3">
                     <label for="address" class="control-label">ΟΔΟΣ</label>
-                    <input id="address" maxlength="100" type="text" required="required" class="form-control" placeholder="π.χ. ΚΑΡΑΜΑΝΛΗ 6" />
+                    <input id="address" name="address" maxlength="100" type="text" required="required" class="form-control" placeholder="π.χ. ΚΑΡΑΜΑΝΛΗ 6" />
                 </div>
                 <div class="form-group my-3">
-                    <label class="control-label">ΚΑΤΟΙΚΟΣ</label>
-                    <input maxlength="30" type="text" required="required" class="form-control" placeholder="π.χ. ΑΘΗΝΑΣ" />
+                    <label class="control-label" for="city" >ΚΑΤΟΙΚΟΣ</label>
+                    <input maxlength="30" type="text" id="city" name="city" required="required" class="form-control" placeholder="π.χ. ΑΘΗΝΑΣ" />
                 </div>
                 <div class="form-group mb-4">
-                    <label class="control-label">ΑΔΤ/ΔΙΑΒΑΤΗΡΙΟ</label>
-                    <input maxlength="20" type="text" required="required" class="form-control" placeholder="π.χ. ΑΦ 123122" />
+                    <label class="control-label" for="passportID">ΑΔΤ/ΔΙΑΒΑΤΗΡΙΟ</label>
+                    <input maxlength="20" type="text"  id="passportID" name="passportID" required="required" class="form-control" placeholder="π.χ. ΑΦ 123122" />
                 </div>
                 <button class="btn btn-outline-info nextBtn float-end" type="button">ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
             </div>
@@ -81,12 +85,12 @@
             </div>
             <div class="panel-body">
                 <div class="form-group my-3">
-                    <label class="control-label">ΕΚΔΟΘΗΚΕ</label>
-                    <input maxlength="70" type="text" required="required" class="form-control" placeholder="π.χ. ΑΣΤΥΝΟΜΟΜΙΑ ΒΟΛΟΥ" />
+                    <label class="control-label" for="v">ΕΚΔΟΘΗΚΕ</label>
+                    <input maxlength="70" name="passportIDCreatedAt" id="passportIDCreatedAt" type="text" required="required" class="form-control" placeholder="π.χ. ΑΣΤΥΝΟΜΟΜΙΑ ΒΟΛΟΥ" />
                 </div>
                 <div class="form-group my-3">
-                    <label class="control-label">ΑΠΟ ΤΟ </label>
-                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ ΓΕΩΡΓΙΟΥ" />
+                    <label class="control-label" for='createdBy'>ΑΠΟ ΤΟ </label>
+                    <input maxlength="100" type="text" id="createdBy"  name="createdBy" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ ΓΕΩΡΓΙΟΥ" />
                 </div>
                 <button class="btn btn-outline-info nextBtn float-end" type="button"> ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
             </div>
@@ -98,22 +102,22 @@
                  <h3 class="panel-title">ΒΗΜΑ 1ο</h3>
             </div>
             <div class="panel-body">
-                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                <select class="form-select form-select-lg mb-3" aria-label="ΕΠΕΛΕΞΕ ΓΕΝΟΣ">
                     <option selected>ΕΠΕΛΕΞΕ ΓΕΝΟΣ</option>
                     <option value="1">Ο</option>
                     <option value="2">Η</option>
                   </select>
                 <div class="form-group my-3">
-                    <label class="control-label">ΟΝΟΜΑΤΕΠΟΝΥΜΟ</label>
-                    <input maxlength="70" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ ΓΕΩΡΓΙΟΥ" />
+                    <label class="control-label" for="AuthfullName">ΟΝΟΜΑΤΕΠΟΝΥΜΟ</label>
+                    <input maxlength="70" id="AuthfullName" name="AuthfullName" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ ΓΕΩΡΓΙΟΥ" />
                 </div>
                 <div class="form-group my-3">
-                    <label class="control-label">ΟΝΟΜΑ ΠΑΤΕΡΑ</label>
-                    <input maxlength="25" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ" />
+                    <label class="control-label" for="Authfathername">ΟΝΟΜΑ ΠΑΤΕΡΑ</label>
+                    <input maxlength="25" type="text" id="Authfathername" name="Authfathername" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ" />
                 </div>
                 <div class="form-group my-3">
-                    <label class="control-label">ΟΝΟΜΑ ΜΗΤΕΡΑΣ </label>
-                    <input maxlength="25" type="text" required="required" class="form-control" placeholder="π.χ. ΑΝΘΗ" />
+                    <label class="control-label" for="Authmothername">ΟΝΟΜΑ ΜΗΤΕΡΑΣ </label>
+                    <input maxlength="25" type="text" id="Authmothername"  name=" Authmothername" required="required" class="form-control" placeholder="π.χ. ΑΝΘΗ" />
                 </div>
                 <button class="btn btn-outline-info nextBtn float-end" type="button"> ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
             </div>
@@ -124,20 +128,20 @@
             </div>
             <div class="panel-body">
                 <div class="form-group my-3">
-                    <label class="control-label">ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ</label>
-                    <input  type="date" required="required" class="form-control" placeholder="DD/MM/YYYY" />
+                    <label class="control-label" for="Autbdate">ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ</label>
+                    <input  type="date" required="required" id="Autbdate" name="Autbdate" class="form-control" placeholder="DD/MM/YYYY" />
                 </div>
                 <div class="form-group my-3">
-                    <label class="control-label">ΤΟΠΟΣ ΓΕΝΝΗΣΗΣ </label>
-                    <input maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΣ" />
+                    <label class="control-label" for="Authblocation">ΤΟΠΟΣ ΓΕΝΝΗΣΗΣ </label>
+                    <input id="Authblocation" name="Authblocation" maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΣ" />
                 </div>
                 <div class="form-group my-3">
-                    <label class="control-label">ΚΑΤΟΙΚΟΣ</label>
-                    <input maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΥ" />
+                    <label class="control-label" for="Authcity">ΚΑΤΟΙΚΟΣ</label>
+                    <input maxlength="55" type="text" id="Authcity" name="Authcity" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΥ" />
                 </div>
                 <div class="form-group my-3">
-                    <label class="control-label">ΟΔΟΣ</label>
-                    <input maxlength="60" type="text" required="required" class="form-control" placeholder="π.χ. ΚΑΡΑΜΑΝΛΗ 8" />
+                    <label class="control-label" for="Authaddress">ΟΔΟΣ</label>
+                    <input maxlength="60" id="Authaddress" name="Authaddress" type="text" required="required" class="form-control" placeholder="π.χ. ΚΑΡΑΜΑΝΛΗ 8" />
                 </div>
                 <button class="btn btn-outline-info nextBtn float-end" type="button">ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
             </div>
@@ -148,25 +152,26 @@
             </div>
             <div class="panel-body">
                 <div class="form-group mb-4">
-                    <label class="control-label">ΑΔΤ/ΔΙΑΒΑΤΗΡΙΟ</label>
-                    <input maxlength="20" type="text" required="required" class="form-control" placeholder="π.χ. ΒΑ 12314" />
+                    <label class="control-label" for="AuthpassportID">ΑΔΤ/ΔΙΑΒΑΤΗΡΙΟ</label>
+                    <input maxlength="20" type="text" id="AuthpassportID" name="AuthpassportID" required="required" class="form-control" placeholder="π.χ. ΒΑ 12314" />
                 </div>
                 <div class="form-group my-3">
-                    <label class="control-label">ΕΚΔΟΘΗΚΕ</label>
-                    <input maxlength="100" type="text" required="required" class="form-control" placeholder="π.χ. ΑΣΤΥΝΟΜΟΜΙΑ ΞΑΘΝΗΣ" />
+                    <label class="control-label" for="AuthpassportIDCreatedAt">ΕΚΔΟΘΗΚΕ</label>
+                    <input maxlength="100" type="text" id="AuthpassportIDCreatedAt" name="AuthpassportIDCreatedAt" required="required" class="form-control" placeholder="π.χ. ΑΣΤΥΝΟΜΟΜΙΑ ΞΑΘΝΗΣ" />
                 </div>
                 <div class="form-group my-3">
-                    <label class="control-label">ΑΠΟ ΤΟ </label>
-                    <input maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ ΓΕΩΡΓΙΟΥ" />
+                    <label class="control-label" for="AuthcreatedBy">ΑΠΟ ΤΟ </label>
+                    <input maxlength="55" type="text" id="AuthcreatedBy" name="AuthcreatedBy" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ ΓΕΩΡΓΙΟΥ" />
                 </div>
                 <div class="form-group mb-4">
-                    <label for="textcontent" class="form-label">ΔΗΛΩΝΩ ΟΤΙ:</label>
-                    <textarea class="form-control" id="textcontent" rows=""></textarea>
+                    <label for="content" class="form-label">ΔΗΛΩΝΩ ΟΤΙ:</label>
+                    <textarea class="form-control" id="content"  name="content" rows="4"></textarea>
                 </div>
                 <button class="btn btn-outline-info nextBtn float-end" type="submit">ΚΑΤΑΧΩΡΗΣΗ ΔΗΛΩΣΗΣ</button>
             </div>
         </div>
     </form>
+    </div>
 </div>
 
  <%- include ('../partials/footer') %>

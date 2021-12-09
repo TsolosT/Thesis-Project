@@ -9,4 +9,4 @@ let applicationData = [
     }
   ];
 
-module.exports = { applicationData };
+module.exports = { applicationData }; 

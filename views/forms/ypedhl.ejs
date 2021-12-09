@@ -4,6 +4,10 @@
 
 
 <div class="container  bg-dark mt-3 rounded-3 p-5  text-light" style="width:26rem;">
+    <div class="row">
+        <h3 class="no-browser-support" tabindex="0">Λυπούμαστε, το πρόγραμμα περιήγησής σας δεν υποστηρίζει το Web Speech API. Δοκιμάστε να ανοίξετε αυτήν την επίδειξη στο Google Chrome ή στο Microsoft Edge<h3>
+    </div>
+   <div class="form">
     <h1 class="mb-4 h4 text-center">Συμπληρωσε την Υπευθυνη Δηλωση</h1>
     <div class="stepwizard">
         <div class="stepwizard-row setup-panel ">
@@ -22,7 +26,7 @@
         </div>
     </div>
     
-     <form role="form" class="my-3">
+     <form role="form" class="my-3" action="/ypedhl" method="post">
         <div class="panel panel-primary setup-content" id="step-1">
             <div class="panel-heading">
                  <h3 class="panel-title">ΒΗΜΑ 1ο</h3>
@@ -30,21 +34,21 @@
             <div class="panel-body">
                 <div class="form-group my-3">
                     <label for="to" class="control-label">ΠΡΟΣ</label>
-                    <input id="to" maxlength="100" type="text" required="required" class="form-control"  />
+                    <input id="to" name="to" maxlength="100" type="text" required="required" class="form-control"/>
                 </div>
                 <div class="form-group my-3">
-                    <label for="name" class="control-label">ΟΝΟΜΑ</label>
-                    <input id="name" maxlength="30" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΣ " />
+                    <label for="fname" class="control-label">ΟΝΟΜΑ</label>
+                    <input id="fname" name="fname" maxlength="30" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΣ " />
                 </div>
                 <div class="form-group my-3">
-                    <label for=" lname" class="control-label">ΕΠΩΝΥΜΟ</label>
-                    <input id="lname" maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ.  ΓΕΩΡΓΙΟΥ" />
+                    <label for="lname" class="control-label">ΕΠΩΝΥΜΟ</label>
+                    <input id="lname" name="lname" maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ.  ΓΕΩΡΓΙΟΥ" />
                 </div>
                 <div class="form-group mb-4">
-                    <label for="fatherName"class="control-label">ΟΝΟΜΑ ΚΑΙ ΕΠΩΝΥΜΟ ΠΑΤΕΡΑ</label>
-                    <input id="fatherName" maxlength="100" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ ΓΕΩΡΓΙΟΥ" />
+                    <label for="fatherfname"class="control-label">ΟΝΟΜΑ ΚΑΙ ΕΠΩΝΥΜΟ ΠΑΤΕΡΑ</label>
+                    <input id="fatherfname"name="fatherfname" maxlength="100" type="text" required="required" class="form-control" placeholder="π.χ. ΝΙΚΟΛΑΟΣ ΓΕΩΡΓΙΟΥ" />
                 </div>
-                <button class="btn btn-outline-info nextBtn float-end" type="button">ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
+                <button class="btn btn-outline-info nextBtn float-end" type="button" aria-label="ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ ΑΙΤΗΣΗΣ">ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
             </div>
         </div>
         <div class="panel panel-primary setup-content" id="step-2">
@@ -53,23 +57,23 @@
             </div>
             <div class="panel-body">
                 <div class="form-group my-3">
-                    <label for="motherName" class="control-label">ΟΝΟΜΑ ΚΑΙ ΕΠΩΝΥΜΟ ΜΗΤΕΡΑΣ</label>
-                    <input id="motherName" maxlength="100" type="text" required="required" class="form-control" placeholder="π.χ. ΑΝΘΗ ΓΕΩΡΓΙΟΥ" />
+                    <label for="motherfname" class="control-label">ΟΝΟΜΑ ΚΑΙ ΕΠΩΝΥΜΟ ΜΗΤΕΡΑΣ</label>
+                    <input id="motherfname"  name="motherfname" maxlength="100" type="text" required="required" class="form-control" placeholder="π.χ. ΑΝΘΗ ΓΕΩΡΓΙΟΥ" />
                 </div>
                 <div class="form-group my-3">
-                    <label for="date" class="control-label">ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ</label>
-                    <input id="date" type="date" required="required" class="form-control" placeholder="DD/MM/YYYY" />
+                    <label for="bdate" class="control-label">ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ</label>
+                    <input id="bdate" name="bdate" type="date" required="required" class="form-control" placeholder="DD/MM/YYYY" />
                 </div>
                 <div class="form-group my-3">
                     <label for="blocation" class="control-label">ΤΟΠΟΣ ΓΕΝΝΗΣΗΣ</label>
-                    <input id="blocation" maxlength="30" type="text" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΣ" />
+                    <input id="blocation" name="blocation" maxlength="30" type="text" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΣ" />
 
                 </div>
                 <div class="form-group mb-4">
-                    <label for="id" class="control-label">ΑΡΙΘΜΟΣ ΔΕΛΤΙΟΥ ΤΑΥΤΟΤΗΤΑΣ</label>
-                    <input id="id" maxlength="15" type="text" required="required" class="form-control" placeholder="π.χ. ΑΜ 23122" />
+                    <label for="passportID" class="control-label">ΑΡΙΘΜΟΣ ΔΕΛΤΙΟΥ ΤΑΥΤΟΤΗΤΑΣ</label>
+                    <input id="passportID" name='passportID' maxlength="15" type="text" required="required" class="form-control" placeholder="π.χ. ΑΜ 23122" />
                 </div>
-                <button class="btn btn-outline-info nextBtn float-end" type="button">ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
+                <button class="btn btn-outline-info nextBtn float-end" type="button" aria-label="ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ ΑΙΤΗΣΗΣ">ΕΠΟΜΕΝΗ ΣΕΛΙΔΑ</button>
             </div>
         </div>
         <div class="panel panel-primary setup-content" id="step-3">
@@ -78,25 +82,27 @@
             </div>
             <div class="panel-body">
                 <div class="form-group my-3">
-                    <label for="tel" class="control-label">ΤΗΛΕΦΩΝΟ</label>
-                    <input id="tel" maxlength="10" type="text" required="required" class="form-control" placeholder="π.χ. 6912345677" />
+                    <label for="phone" class="control-label">ΤΗΛΕΦΩΝΟ</label>
+                    <input id="phone" name="phone" maxlength="10" type="text" required="required" class="form-control" placeholder="π.χ. 6912345677" />
                 </div>
                 <div class="form-group my-3">
-                    <label for="homeAddress" class="control-label">ΤΟΠΟΣ ΚΑΤΟΙΚΙΑΣ </label>
-                    <input id="homeAddress" maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΣ" />
+                    <label for="city" class="control-label">ΤΟΠΟΣ ΚΑΤΟΙΚΙΑΣ</label>
+                    <input id="city" name="city" maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΣ" />
                 </div>
                 <div class="form-group my-3">
                     <label for="address" class="control-label">ΔΙΕΥΘΥΝΣΗ</label>
-                    <input id="address" maxlength="55" type="text" required="required" class="form-control" placeholder="ΟΔΟΣ ΑΡΙΘΜΟΣ ΤΚ" />
+                    <input id="address" name="address" maxlength="55" type="text" required="required" class="form-control" placeholder="ΟΔΟΣ ΑΡΙΘΜΟΣ ΤΚ" />
                 </div>
                 <div class="form-group mb-4">
-                    <label for="textcontent" class="form-label">ΔΗΛΩΝΩ ΟΤΙ:</label>
-                    <textarea class="form-control" id="textcontent" rows="4"></textarea>
+                    <label for="content" class="form-label">ΔΗΛΩΝΩ ΟΤΙ:</label>
+                    <textarea class="form-control" id="content"  name="content" rows="4"></textarea>
                 </div>
                 <button class="btn btn-outline-info nextBtn float-end" type="submit">ΚΑΤΑΧΩΡΗΣΗ ΔΗΛΩΣΗΣ</button>
             </div>
         </div>
     </form>
+   </div>
+   
 </div>
 
  <%- include ('../partials/footer') %>

@@ -1,15 +1,21 @@
+<%- include ('../partials/header') %>
+
+<%- include ('../partials/nav') %>
 
 <div class="container mt-5">
   <div class="row justify-content-md-center">
     <div class="col col-5">
-      <form method="post" action="/applicationData" class="bg-dark p-3 text-light">
+      <div class="row">
+              <h3 class="no-browser-support" tabindex="0">Λυπούμαστε, το πρόγραμμα περιήγησής σας δεν υποστηρίζει το Web Speech API. Δοκιμάστε να ανοίξετε αυτήν την επίδειξη στο Google Chrome ή στο Microsoft Edge<h3>
+      </div>
+      <form method="post" action="/applicationData" class="bg-dark p-3 text-light form">
        
         <div class="form-group">
-          <label for="lastName">ΕΠΙΘΕΤΟ</label>
+          <label for="lastName" >ΕΠΙΘΕΤΟ</label>
           <div class="input-group mb-3">
             <input type="text" class="form-control" id="lastName" name="lastName"  aria-label="User's lastname input field" aria-describedby="lastNameHelp">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary btn-micro" type="button"><i class="bi bi-mic bi-mic-icon"></i></button>
+              <button class="btn btn-outline-secondary btn-micro" type="button" aria-label="Πατα για ηχογραφηση"><i class="bi bi-mic bi-mic-icon"></i></button>
             </div>
           </div>
           
@@ -19,7 +25,7 @@
             <div class="input-group mb-3">
               <input type="text" class="form-control" id="firstName" name="firstName"  aria-label="User's firstname input field" aria-describedby="firstNameHelp">
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary btn-micro" type="button"><i class="bi bi-mic bi-mic-icon"></i></button>
+                <button class="btn btn-outline-secondary btn-micro" type="button" aria-label="Πατα για ηχογραφηση"><i class="bi bi-mic bi-mic-icon"></i></button>
               </div>
             </div>
           </div>
@@ -28,7 +34,7 @@
             <div class="input-group mb-3">
               <input type="text" class="form-control" id="idCardNumber" name="idCardNumber"  aria-label="User's ID card number input field" aria-describedby="idCardNumberHelp">
               <div class="input-group-append">
-                <button class="btn btn-outline-secondary btn-micro" type="button"><i class="bi bi-mic bi-mic-icon"></i></button>
+                <button class="btn btn-outline-secondary btn-micro" type="button" aria-label="Πατα για ηχογραφηση"><i class="bi bi-mic bi-mic-icon"></i></button>
               </div>
             </div>
           </div>
@@ -37,16 +43,14 @@
              <div class="input-group mb-3">
             <input type="text" class="form-control" id="city" name="city"  aria-label="User's city input field" aria-describedby="cityHelp">
             <div class="input-group-append">
-              <button class="btn btn-outline-secondary btn-micro" type="button"><i class="bi bi-mic bi-mic-icon"></i></button>
+              <button class="btn btn-outline-secondary btn-micro" type="button" aria-label="Πατα για ηχογραφηση"><i class="bi bi-mic bi-mic-icon"></i></button>
             </div>
           </div>
           </div>
-        <!-- <div class="form-group form-check">
-          <input type="checkbox" class="form-check-input" id="termsChecked">
-          <label class="form-check-label" for="termsChecked">Συμφωνώ με τους <a href="#">όρους χρήσης</a></label>
-        </div> -->
         <button type="submit" class="btn btn-info  w-100">Submit Form</button>
       </form>
     </div>
   </div>
 </div>
+
+<%- include ('../partials/footer') %>

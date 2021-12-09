@@ -5,6 +5,8 @@ const port=process.env.PORT || 3000;
 const express = require("express"),
       app = express(),
       path = require("path"),
+      expressSanitizer = require("express-sanitizer"),
+      bodyParser       = require("body-parser"),
       methodOverride = require("method-override");
 
 //require routes
@@ -21,6 +23,7 @@ app.use(methodOverride('_method'));
 app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine','ejs');
 app.set('views', path.join(__dirname, '/views'));
+app.use(expressSanitizer());
 
 
 //Routes

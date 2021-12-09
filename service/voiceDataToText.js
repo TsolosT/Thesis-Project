@@ -53,15 +53,17 @@ const recognizeStream = client
   );
 // Start recording and send the microphone input to the Speech API
 recorder
-  .start({
+  .record({
     sampleRateHertz: 16000,
     threshold: 0,
     verbose: false,
     recordProgram: 'sox', // Try also "arecord" or "sox"
     silence: '10.0',
   })
+  .stream()
   .on('error', console.error)
   .pipe(recognizeStream);
 console.log('Listening, press Ctrl+C to stop.');
+
 }
 module.exports = googleSpeechToText;
