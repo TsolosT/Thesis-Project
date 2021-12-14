@@ -13,18 +13,42 @@ try {
         const transcript = event.results[current][0].transcript;
         let mobileRepeatBug = (current == 1 && transcript == event.results[0][0].transcript);
         if (!mobileRepeatBug) {
-                //do something transcript;
+            let focusedEl=document.activeElement;
+            focusedEl.value = transcript;
+            focusedEl.blur();
         }
       };
     //   prepei na vrw pws na pernw k na dinw ta data sto ka8e input
-      // add listener
-      for(let btn of microBtns)
-      {
-          btn.addEventListener('click',(e)=>{
-              let input = e.target.parentElement.previousElementSibling;
-              recognition.start();
-          });
-      }
+      // add listener by btns
+    //   for(let btn of microBtns)
+    //   { 
+    //       //set event by click
+    //       btn.addEventListener('click',(e)=>{
+    //           let input = e.target.parentElement.previousElementSibling;
+    //           recognition.start();
+    //       });
+    //       //set event by keypress enter
+    //       btn.addEventListener('keyup',(e)=>{
+    //         if (e.defaultPrevented) {
+    //             return; // Do nothing if the event was already processed
+    //           }
+    //         if(e.key ==="Enter")
+    //         {
+    //              event.preventDefault();
+    //         }
+    //         // Cancel the default action to avoid it being handled twice
+    //          e.preventDefault();
+    //     },true);
+    //   }
+    // By input && keypress event
+    for(let input of inputs)
+    {
+        input.addEventListener('keydown',(e)=>{
+             if (e.defaultPrevented){return;}
+            if(e.key==="Enter"){recognition.start();}
+             e.preventDefault();
+        },true);
+    }
 } catch (e) {
     console.error(e);
     $('.no-browser-support').show();
