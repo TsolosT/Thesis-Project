@@ -5,7 +5,7 @@ const express = require('express'),
       //greek utils require isws
       { v4: uuid } = require("uuid"), //For generating ID's
       { applicationData } = require('../model/fooFormData'),
-       googleSpeechToText  = require('../service/voiceDataToText.js');
+       moment = require('moment');
 
 //show form data route
 router.get("/myforms",(req,res)=>{
@@ -14,7 +14,7 @@ router.get("/myforms",(req,res)=>{
 //post a FORM route
 router.post('/applicationData',(req,res)=>{
   
-    const { lastName,firstName,idCardNumber,city } = req.body; //greekUtils.sanitizeDiacritics(req.body);
+    const { lastName,firstName,idCardNumber,city } = req.body;
     applicationData.push({ lastName, firstName, idCardNumber, city, id: uuid() });
     //temp post data validation show
     console.log(applicationData[applicationData.length-1]);
@@ -24,7 +24,6 @@ router.post('/applicationData',(req,res)=>{
 
 //test form
 router.get('/form',(req,res)=>{
-  // googleSpeechToText();
   res.render('forms/basicForm');
 });
 //exousiodotisi
@@ -33,8 +32,10 @@ router.get('/exousiodotisi',(req,res)=>{
 });
 //Post affirmation form data
 router.post('/exousiodotisi',(req,res)=>{
+  let createdDate =`${moment().format('L')} ${moment().format('LT')}`;
   let newData = { 
     id: uuid(),
+    createdDate: createdDate,
     // gentle:req.body.gentle, select fix
     fullName:req.body.fullName,
     fathername:req.body.fathername,
@@ -65,11 +66,11 @@ router.post('/exousiodotisi',(req,res)=>{
   try{
     applicationData.push(newData);
     // console.log(newData + " Form has been added");
-    res.redirect('/forms/myforms');
+    res.redirect('/myforms');
   }catch(error)
   {
     // debug
-    // console.log(error);
+     console.log(error);
     res.render("error");
   }
 });
@@ -79,6 +80,7 @@ router.get('/ypedhl',(req,res)=>{
 });
 //Post affirmation form data
 router.post('/ypedhl',(req,res)=>{
+  let createdDate =`${moment().format('L')} ${moment().format('LT')}`;
   let newData = {
     to:req.body.to,
     fname:req.body.fname,
@@ -92,17 +94,17 @@ router.post('/ypedhl',(req,res)=>{
     city:req.body.city,
     address:req.body.address,
     content:req.body.content,
-    id: uuid()
+    id: uuid(),
+    createdDate: createdDate
   };
   newData.content = req.sanitize(req.body.content);
   try{
     applicationData.push(newData);
-    // console.log(newData + " Form has been added");
-    res.redirect('/forms/myforms');
+    res.redirect('/myforms');
   }catch(error)
   {
     // debug
-    // console.log(error);
+    console.log(error);
     res.render("error");
   }
 });

@@ -1,25 +1,9 @@
 const express = require('express'),
-      router  = express.Router(),
-      googleSpeechToText = require('../service/voiceDataToText'),
-      multer = require('multer');
+      router  = express.Router();
       
-const upload = multer();
-
 //Home route
-router.get("/",(req,res)=>{
-    //  googleSpeechToText();
-    res.render("home");
-});
-// router.post("/", upload.any(), async (req, res) => {
-//     console.log("Getting text transcription..");
-//     let transcription = await googleSpeechToText(req.files[0].buffer);
-//     console.log("Text transcription: " + transcription);
-//     // res.status(200).send(transcription).render("home");
-// });
-
+router.get("/",(req,res)=>{ res.render("home");});
 //Bad Request Route
-router.get("*",function(req,res){
-    res.render("error");
-});
+router.get("*",(req,res)=>{res.render("error");});
 
 module.exports = router;

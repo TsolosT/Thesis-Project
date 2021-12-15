@@ -1,14 +1,11 @@
 try {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     const recognition = new SpeechRecognition();
-    const microBtns = document.querySelectorAll(".btn-micro");
+    // const microBtns = document.querySelectorAll(".btn-micro");
     const inputs = document.querySelectorAll('input');
 
-    recognition.onstart = function () {
-        console.log("voice is activate,you can to microphone");
-      };
-      
-      recognition.onresult = function (event) {
+    recognition.onstart = () => {console.log("voice is activate,you can to microphone");};
+    recognition.onresult =  (event) => {
         const current = event.resultIndex;
         const transcript = event.results[current][0].transcript;
         let mobileRepeatBug = (current == 1 && transcript == event.results[0][0].transcript);
@@ -18,10 +15,9 @@ try {
             focusedEl.blur();
         }
       };
-    //   prepei na vrw pws na pernw k na dinw ta data sto ka8e input
-      // add listener by btns
+      // Stiil not complete -- find way to add to inpui sibling
     //   for(let btn of microBtns)
-    //   { 
+    //   {
     //       //set event by click
     //       btn.addEventListener('click',(e)=>{
     //           let input = e.target.parentElement.previousElementSibling;
@@ -29,14 +25,8 @@ try {
     //       });
     //       //set event by keypress enter
     //       btn.addEventListener('keyup',(e)=>{
-    //         if (e.defaultPrevented) {
-    //             return; // Do nothing if the event was already processed
-    //           }
-    //         if(e.key ==="Enter")
-    //         {
-    //              event.preventDefault();
-    //         }
-    //         // Cancel the default action to avoid it being handled twice
+    //         if (e.defaultPrevented) { return;}
+    //         if(e.key ==="Enter"){  e.preventDefault(); }
     //          e.preventDefault();
     //     },true);
     //   }
@@ -49,13 +39,20 @@ try {
              e.preventDefault();
         },true);
     }
+    if( document.querySelector('textarea')){
+        document.querySelector('textarea').addEventListener('keydown',(e)=>{
+            if (e.defaultPrevented){return;}
+           if(e.key==="Enter"){recognition.start();}
+            e.preventDefault();
+       },true);
+    }
+    
+
 } catch (e) {
     console.error(e);
     $('.no-browser-support').show();
     $('.form').hide();
 }
-
-
 // Form Stepper functions
 $(document).ready(function () {
 

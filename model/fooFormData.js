@@ -5,6 +5,7 @@ let applicationData = [
       lastName: "ΤΣΟΛ",
       firstName: "ΝΙΚΟΣ",
       idCardNumber: "AM 4812",
+      createdDate: "11/2/2020 11:05 MM",
       city: "ΑΘΗΝΑ"
     }
   ];
