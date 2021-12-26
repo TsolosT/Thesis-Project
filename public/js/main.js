@@ -53,6 +53,7 @@ try {
     $('.no-browser-support').show();
     $('.form').hide();
 }
+
 // Form Stepper functions
 $(document).ready(function () {
 

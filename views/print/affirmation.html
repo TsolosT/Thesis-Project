@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/css/print.css">
+    <title>ΥΠΕΥΘΥΝΗ ΔΗΛΩΣΗ {{ form.id }}</title>
+</head>
+<body>
+    <div class="container border p-2">
+        <div class="text-center">
+            <img class="logo" src="C:\Users\teots\Desktop\Thesis\Project App\Thesis-Project\public\assets\images\gov_hellas_logo.PNG">
+        </div>
+        <div class="border text-center mb-2">
+            <p>Η ακρίβεια των στοιχείων που υποβάλλονται με αυτή τη δήλωση μπορεί να ελεγχθεί με βάση το αρχείο άλλων υπηρεσιών (άρθρο 8,παρ. 4 Ν. 1599/1986)</p>
+        </div>
+        <div class="row border mb-2">
+            <div class="row">
+                <div class="col-1 border">
+                    <h4>ΠΡΟΣ<sup><small>(1)</small></sup>:</h4>
+                </div>
+                <div class="col-11 border">{{ data }}</div>
+            </div>
+            <div class="row">
+                <div class="col-2 border">
+                    <h4>
+                        Ο – Η Όνομα:
+                    </h4>
+                </div>
+                <div class="col-4 border">{{ data }}</div>
+                <div class="col-2 border">
+                    <h4>Επώνυμο:</h4>
+                </div>
+                <div class="col-4 border">{{ data }}</div>
+            </div>
+            <div class="row">
+                <div class="col-2 border">
+                    <h4>Όνομα και Επώνυμο Πατέρα:</h4>
+                </div>
+                <div class="col-10 border">{{ data }}</div>
+            </div>
+            <div class="row">
+                <div class="col-2 border">
+                    <h4>Όνομα και Επώνυμο Μητέρας:</h4>
+                </div>
+                <div class="col-10 border">{{ data }}</div>
+            </div>
+            <div class="row">
+                <div class="col-2 border">
+                    <h4>Ημερομηνία γέννησης <sup><small>(2)</small></sup> : </h4>
+                </div>
+                <div class="col-10 border">{{ data }}</div>
+            </div>
+            <div class="row">
+                <div class="col-2 border">
+                    <h4>Τόπος Γέννησης:</h4>
+                </div>
+                <div class="col-10 border">{{ data }}</div>
+            </div>
+            <div class="row">
+                <div class="col-2 border">
+                    <h4>Αριθμός Δελτίου Ταυτότητας:</h4>
+                </div>
+                <div class="col-4 border">{{ data }}</div>
+                <div class="col-1 border">
+                    <h4>Τηλ:</h4>
+                </div>
+                <div class="col-4 border">{{ data }}</div>
+            </div>
+            <div class="row">
+                <div class="col-2 border">
+                    <h4>Αρ. Τηλεομοιοτύπου (Fax)</h4>
+                </div>
+                <div class="col-4 border">{{ data }}</div>
+                <div class="col-2 border"><h4> ΟΔΟΣ Αριθ. ΤΚ:</h4></div>
+                <div class="col-4 border">{{ data }}</div>
+            </div>
+            <div class="row">
+                <div class="col-2 border"><h4>Αρ. Τηλεομοιοτύπου (Fax):</h4></div>
+                <div class="col-4 border">{{ data }}</div>
+                <div class="col-2 border">
+                    <h4>Δ/νση Ηλεκτρ.
+                        Ταχυδρομείου
+                        (Ε-mail):</h4>
+                </div>
+                <div class="col-4 border">{{ data }}</div>
+            </div>
+        </div>
+        <div>
+            <p>
+                Με ατομική μου ευθύνη και γνωρίζοντας τις κυρώσεις <sup>(3)</sup>, που προβλέπονται από της διατάξεις της παρ. 6 του άρθρου 22 του Ν. 1599/1986, δηλώνω ότι: 
+            </p>
+            <p>{{ content }}</p>
+        </div>
+        <div class="mb-2 text-right">
+            <p>Ημερομηνία: <span> {{ date }}</span></p>
+            <div>
+                <h4>Ο – Η Δηλών </h4>
+                <div class="empty"></div>
+                <p>(Υπογραφή)</p>
+            </div>
+        </div>
+        <div class="disclaimer mb-2">
+            <p>(1) Αναγράφεται από τον ενδιαφερόμενο πολίτη ή Αρχή ή η Υπηρεσία του δημόσιου τομέα, που απευθύνεται η αίτηση. </p>
+            <p>(2) Αναγράφεται ολογράφως</p>
+            <p>(3) «Όποιος εν γνώσει του δηλώνει ψευδή γεγονότα ή αρνείται ή αποκρύπτει τα αληθινά με έγγραφη υπεύθυνη δήλωση του
+                άρθρου 8 τιμωρείται με φυλάκιση τουλάχιστον τριών μηνών. Εάν ο υπαίτιος αυτών των πράξεων σκόπευε να προσπορίσει στον
+                εαυτόν του ή σε άλλον περιουσιακό όφελος βλάπτοντας τρίτον ή σκόπευε να βλάψει άλλον, τιμωρείται με κάθειρξη μέχρι 10 ετών. </p>
+            <p>(4) Σε περίπτωση ανεπάρκειας χώρου η δήλωση συνεχίζεται στην πίσω όψη της και υπογράφεται από τον δηλούντα ή την
+                δηλούσα</p>
+        </div>
+    </div>
+</body>
+</html>

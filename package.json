@@ -19,6 +19,7 @@
     "method-override": "^3.0.0",
     "moment": "^2.29.1",
     "node-record-lpcm16": "^1.0.1",
+    "pdf-creator-node": "^2.2.4",
     "uuid": "^8.3.2"
   },
   "devDependencies": {

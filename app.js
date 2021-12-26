@@ -11,6 +11,7 @@ const express = require("express"),
 
 //require routes
 const formRoutes = require('./routes/form');
+const pdfRoutes = require('./routes/pdf');
 const indexRoutes = require('./routes/index');
 
 //To parse form data in POST request body:
@@ -29,6 +30,7 @@ app.locals.moment=require("moment");
 
 //Routes
 app.use(formRoutes);
+app.use(pdfRoutes);
 app.use(indexRoutes);
 
 //Server Start Point
