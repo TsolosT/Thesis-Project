@@ -14,31 +14,35 @@ let options = {
     orientation: "portrait",
 };
 
-router.get('/pdf/:id/donwload',(req,res)=>{
-    let html = fs.readFileSync('./views/print/affirmation.html', 'utf8');
-    let document = {
-        html: html,
-        data: {
-        //   form: users,
-        },
-        path: `./storage/${req.params.id}.pdf`,
-        type: "",
-      };
-    pdf.create(document, options)
+router.get('/pdf/:id/donwload',(req, respond) => {
+  let reqPDF = req.params.id;
+  let pdfData = applicationData.find((form) => {
+    return form.id === reqPDF;
+  });
+
+  let html =
+    pdfData.app === "aff"
+      ? fs.readFileSync("./views/print/affirmation.html", "utf8")
+      : fs.readFileSync("./views/print/auth.html", "utf8");
+
+  let document = {
+    html: html,
+    data: {
+       data: pdfData,
+    },
+    path: `./storage/${req.params.id}.pdf`,
+    type: "",
+  };
+  pdf
+    .create(document, options)
     .then((res) => {
-        console.log(res);
-      })
+    //   console.log(res.filename);
+      respond.download(res.filename); 
+    })
     .catch((error) => {
-     console.error(error);
-     });
-    //send
-    res.send('GG');
-  });       
+      console.error(error);
+    });
+});       
 
-
-  //template Request Route not working
-router.get("/pdf",(req,res)=>{
-    res.sendFile(path.join(__dirname+'/affirmation.html'));
-});
 
 module.exports = router;

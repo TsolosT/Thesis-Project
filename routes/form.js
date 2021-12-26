@@ -32,35 +32,37 @@ router.get('/exousiodotisi',(req,res)=>{
 });
 //Post affirmation form data
 router.post('/exousiodotisi',(req,res)=>{
-  let createdDate =`${moment().format('L')} ${moment().format('LT')}`;
-  let newData = { 
+  let createdDate = `${moment().format("L")}`;
+  let createdFileDate = `${moment().format("L")} ${moment().format("LT")}`;
+  let newData = {
+    app: "auth",
     id: uuid(),
     createdDate: createdDate,
+    createdFileDate: createdFileDate,
     // gentle:req.body.gentle, select fix
-    fullName:req.body.fullName,
-    fathername:req.body.fathername,
-    mothername:req.body.mothername,
-    bdate:req.body.bdate,
-    blocation:req.body.blocation,
-    passportID:req.body.passportID,
-    passportIDCreatedAt:req.body.passportIDCreatedAt,
-    createdBy:req.body.createdBy,
-    city:req.body.city,
-    address:req.body.address,
+    fullName: req.body.fullName,
+    fathername: req.body.fathername,
+    mothername: req.body.mothername,
+    bdate: req.body.bdate,
+    blocation: req.body.blocation,
+    passportID: req.body.passportID,
+    passportIDCreatedAt: req.body.passportIDCreatedAt,
+    createdBy: req.body.createdBy,
+    city: req.body.city,
+    address: req.body.address,
     // to auth
     // gentle:req.body.gentle, select fix
-    AuthfullName:req.body.AuthfullName,
-    Authfathername:req.body.Authfathername,
-    Authmothername:req.body.Authmothername,
-    Autbdate:req.body.Autbdate,
-    Authblocation:req.body.Authblocation,
-    AuthpassportID:req.body.AuthpassportID,
-    AuthpassportIDCreatedAt:req.body.AuthpassportIDCreatedAt,
-    AuthcreatedBy:req.body.AuthcreatedBy,
-    Authcity:req.body.Authcity,
-    Authaddress:req.body.Authaddress,
-    content:req.body.content,
-   
+    AuthfullName: req.body.AuthfullName,
+    Authfathername: req.body.Authfathername,
+    Authmothername: req.body.Authmothername,
+    Autbdate: req.body.Autbdate,
+    Authblocation: req.body.Authblocation,
+    AuthpassportID: req.body.AuthpassportID,
+    AuthpassportIDCreatedAt: req.body.AuthpassportIDCreatedAt,
+    AuthcreatedBy: req.body.AuthcreatedBy,
+    Authcity: req.body.Authcity,
+    Authaddress: req.body.Authaddress,
+    content: req.body.content,
   };
   newData.content = req.sanitize(req.body.content);
   try{
@@ -80,22 +82,25 @@ router.get('/ypedhl',(req,res)=>{
 });
 //Post affirmation form data
 router.post('/ypedhl',(req,res)=>{
-  let createdDate =`${moment().format('L')} ${moment().format('LT')}`;
+  let createdDate =`${moment().format('L')}`;
+  let createdFileDate =`${moment().format('L')} ${moment().format('LT')}`;
   let newData = {
-    to:req.body.to,
-    fname:req.body.fname,
-    lname:req.body.lname,
-    fatherFname:req.body.fatherFname,
-    motherFname:req.body.motherFname,
-    bdate:req.body.bdate,
-    blocation:req.body.blocation,
-    passportID:req.body.passportID,
-    phone:req.body.phone,
-    city:req.body.city,
-    address:req.body.address,
-    content:req.body.content,
+    app: "aff",
+    to: req.body.to,
+    fname: req.body.fname,
+    lname: req.body.lname,
+    fatherFname: req.body.fatherFname,
+    motherFname: req.body.motherFname,
+    bdate: req.body.bdate,
+    blocation: req.body.blocation,
+    passportID: req.body.passportID,
+    phone: req.body.phone,
+    city: req.body.city,
+    address: req.body.address,
+    content: req.body.content,
     id: uuid(),
-    createdDate: createdDate
+    createdDate: createdDate,
+    createdFileDate: createdFileDate,
   };
   newData.content = req.sanitize(req.body.content);
   try{
