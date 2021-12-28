@@ -41,7 +41,6 @@ let applicationData = [
     blocation: "ΒΟΛΟΣ",
     passportID: "AM 4812",
     passportIDCreatedAt: "ΑΣΤΥΝΟΜΙΑ ΒΟΛΟΥ",
-    passportIDCreatedAt: "11/2/02",
     createdBy: "ΑΘΑΝΑΣΙΟΣ ΔΙΑΚΟΣ",
     city: "ΑΘΗΝΑ",
     address: "ΜΑΓΝΗΣΙΑΣ 1 32129",

@@ -8,7 +8,7 @@
     <style>
           html,body{
                 font-family: Georgia, 'Times New Roman', Times, serif;
-                font-size: 11px;
+                font-size: 12px;
                 margin: 8% 10%;
                 }
             h1{text-decoration: underline;}
@@ -78,10 +78,10 @@
         {{#with data}}
         <div class="row">
             <p>Ο/Η κάτωθι υπογεγραμμένος/η  {{this.fullName}}</p>
-            <p>του  {{this.fatherFname}} και της{{this.motherFname}} </p>
+            <p>του  {{this.fatherFname}} και της {{this.motherFname}} </p>
             <p>γεννηθείς την {{this.bdate}} ,στην {{this.blocation}} </p>
             <p>κάτοικος  {{this.city}} , οδός {{this.address}} </p>
-            <p>αρ {{this.passportID}} ,με ΑΔΤ/Διαβατηρίου {{this.}} που εκδόθηκε την</p>
+            <p>αρ  ,με ΑΔΤ/Διαβατηρίου {{this.passportID}} που εκδόθηκε την</p>
             <p>{{this.passportIDCreatedAt}} από το {{this.createdBy}} </p>
         </div>
         <div class="text-center">
@@ -89,10 +89,10 @@
         </div>
         <div class="row">
             <p>Τον/Την {{this.AuthfullName}}</p>
-            <p>του {{this.Authfathername}} και της{{this.Authmothername}} </p>
+            <p>του {{this.Authfathername}} και της {{this.Authmothername}} </p>
             <p>γεννηθείς την {{this.Autbdate}} ,στην {{this.Authblocation}} </p>
             <p>κάτοικος {{this.Authcity}} , οδός {{this.Authaddress}} </p>
-            <p>αρ {{this.AuthpassportID}} ,με ΑΔΤ/Διαβατηρίου {{this.}} που εκδόθηκε την</p>
+            <p>αρ ,με ΑΔΤ/Διαβατηρίου {{this.AuthpassportID}} που εκδόθηκε την</p>
             <p>{{this.AuthpassportIDCreatedAt}} από τον {{this.AuthcreatedBy}} </p>
         </div>
         <div class="clear-fix">

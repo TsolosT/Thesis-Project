@@ -23,7 +23,7 @@ router.get('/pdf/:id/donwload',(req, respond) => {
   let html =
     pdfData.app === "aff"
       ? fs.readFileSync("./views/print/affirmation.html", "utf8")
-      : fs.readFileSync("./views/print/auth.html", "utf8");
+      : fs.readFileSync("./views/print/authtemplate.html", "utf8");
 
   let document = {
     html: html,
