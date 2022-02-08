@@ -1,9 +1,9 @@
-const { default: regex } = require('uuid/dist/regex');
+// const { default: regex } = require('uuid/dist/regex');
 
 const express = require('express'),
       router  = express.Router(),
       //greek utils require isws
-      { v4: uuid } = require("uuid"), //For generating ID's
+      { v4: uuidv4 } = require("uuid"), //For generating ID's
       { applicationData } = require('../model/fooFormData'),
        moment = require('moment');
 
@@ -15,7 +15,7 @@ router.get("/myforms",(req,res)=>{
 router.post('/applicationData',(req,res)=>{
   
     const { lastName,firstName,idCardNumber,city } = req.body;
-    applicationData.push({ lastName, firstName, idCardNumber, city, id: uuid() });
+    applicationData.push({ lastName, firstName, idCardNumber, city, id: uuidv4() });
     //temp post data validation show
     console.log(applicationData[applicationData.length-1]);
   
@@ -36,7 +36,7 @@ router.post('/exousiodotisi',(req,res)=>{
   let createdFileDate = `${moment().format("L")} ${moment().format("LT")}`;
   let newData = {
     app: "auth",
-    id: uuid(),
+    id: uuidv4(),
     createdDate: createdDate,
     createdFileDate: createdFileDate,
     // gentle:req.body.gentle, select fix
@@ -98,7 +98,7 @@ router.post('/ypedhl',(req,res)=>{
     city: req.body.city,
     address: req.body.address,
     content: req.body.content,
-    id: uuid(),
+    id: uuidv4(),
     createdDate: createdDate,
     createdFileDate: createdFileDate,
   };

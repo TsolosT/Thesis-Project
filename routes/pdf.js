@@ -1,4 +1,4 @@
-const { default: regex } = require('uuid/dist/regex');
+// const { default: regex } = require('uuid/dist/regex');
 
 const express = require('express'),
       router  = express.Router(),
