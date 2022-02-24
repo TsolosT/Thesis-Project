@@ -15,21 +15,6 @@ try {
             focusedEl.blur();
         }
       };
-      // Stiil not complete -- find way to add to inpui sibling
-    //   for(let btn of microBtns)
-    //   {
-    //       //set event by click
-    //       btn.addEventListener('click',(e)=>{
-    //           let input = e.target.parentElement.previousElementSibling;
-    //           recognition.start();
-    //       });
-    //       //set event by keypress enter
-    //       btn.addEventListener('keyup',(e)=>{
-    //         if (e.defaultPrevented) { return;}
-    //         if(e.key ==="Enter"){  e.preventDefault(); }
-    //          e.preventDefault();
-    //     },true);
-    //   }
     // By input && keypress event
     for(let input of inputs)
     {
