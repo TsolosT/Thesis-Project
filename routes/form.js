@@ -39,7 +39,7 @@ router.post('/exousiodotisi',(req,res)=>{
     id: uuidv4(),
     createdDate: createdDate,
     createdFileDate: createdFileDate,
-    // gentle:req.body.gentle, select fix
+    gentle:req.body.gender, 
     fullName: req.body.fullName,
     fathername: req.body.fathername,
     mothername: req.body.mothername,
@@ -51,7 +51,7 @@ router.post('/exousiodotisi',(req,res)=>{
     city: req.body.city,
     address: req.body.address,
     // to auth
-    // gentle:req.body.gentle, select fix
+    to_gentle:req.body.gender, 
     AuthfullName: req.body.AuthfullName,
     Authfathername: req.body.Authfathername,
     Authmothername: req.body.Authmothername,
@@ -91,12 +91,12 @@ router.post('/ypedhl',(req,res)=>{
     lname: req.body.lname,
     fatherFname: req.body.fatherFname,
     motherFname: req.body.motherFname,
-    bdate: req.body.bdate,
+    bdate: `%{req.body.bdateDD}//%{req.body.bdateMM}//%{req.body.bdateYY}`,
     blocation: req.body.blocation,
     passportID: req.body.passportID,
     phone: req.body.phone,
     city: req.body.city,
-    address: req.body.address,
+    address: `%{req.body.addressStreet}//%{req.body.addressNO}//%{req.body.addressPC}`,
     content: req.body.content,
     id: uuidv4(),
     createdDate: createdDate,

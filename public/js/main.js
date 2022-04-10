@@ -3,15 +3,15 @@ try {
     const recognition = new SpeechRecognition();
     // const microBtns = document.querySelectorAll(".btn-micro");
     const inputs = document.querySelectorAll('input');
-
+    recognition.lang = 'el-GR';
     recognition.onstart = () => {console.log("voice is activate,you can to microphone");};
     recognition.onresult =  (event) => {
         const current = event.resultIndex;
-        const transcript = event.results[current][0].transcript;
+        const transcript = event.results[current][0].transcript.toUpperCase();
         let mobileRepeatBug = (current == 1 && transcript == event.results[0][0].transcript);
         if (!mobileRepeatBug) {
             let focusedEl=document.activeElement;
-            focusedEl.value = transcript;
+            focusedEl.value = transcript.toUpperCase();
             focusedEl.blur();
         }
       };

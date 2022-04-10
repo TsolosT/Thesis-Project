@@ -36,7 +36,7 @@ router.get('/pdf/:id/donwload',(req, respond) => {
   pdf
     .create(document, options)
     .then((res) => {
-    //   console.log(res.filename);
+    //console.log(res.filename);
       respond.download(res.filename); 
     })
     .catch((error) => {

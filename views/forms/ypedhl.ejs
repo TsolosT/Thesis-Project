@@ -61,13 +61,25 @@
                     <input id="motherfname"  name="motherfname" maxlength="100" type="text" required="required" class="form-control" placeholder="π.χ. ΑΝΘΗ ΓΕΩΡΓΙΟΥ" />
                 </div>
                 <div class="form-group my-3">
-                    <label for="bdate" class="control-label">ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ</label>
-                    <input id="bdate" name="bdate" type="text" required="required" class="form-control" placeholder="DD/MM/YYYY" />
+                    <label  class="control-label">ΗΜΕΡΟΜΗΝΙΑ ΓΕΝΝΗΣΗΣ </label>     
+                    <div class="row">
+                        <div class="col">      
+                        <label for="bdateDD" class="control-label">ΗΜΕΡΑ </label>           
+                        <input id="bdateDD" name="bdateDD" type="text" required="required" class="form-control" placeholder="DD" />
+                        </div>
+                        <div class="col">      
+                        <label for="bdateMM" class="control-label">ΜΗΝΑΣ</label>           
+                        <input id="bdateMM" name="bdateMM" type="text" required="required" class="form-control" placeholder="MM" />
+                        </div>
+                        <div class="col">      
+                        <label for="bdateYY" class="control-label">ΕΤΟΣ</label>           
+                        <input id="bdateYY" name="bdateYY" type="text" required="required" class="form-control" placeholder="YY" />
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group my-3">
                     <label for="blocation" class="control-label">ΤΟΠΟΣ ΓΕΝΝΗΣΗΣ</label>
                     <input id="blocation" name="blocation" maxlength="30" type="text" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΣ" />
-
                 </div>
                 <div class="form-group mb-4">
                     <label for="passportID" class="control-label">ΑΡΙΘΜΟΣ ΔΕΛΤΙΟΥ ΤΑΥΤΟΤΗΤΑΣ</label>
@@ -90,8 +102,21 @@
                     <input id="city" name="city" maxlength="55" type="text" required="required" class="form-control" placeholder="π.χ. ΒΟΛΟΣ" />
                 </div>
                 <div class="form-group my-3">
-                    <label for="address" class="control-label">ΔΙΕΥΘΥΝΣΗ</label>
-                    <input id="address" name="address" maxlength="55" type="text" required="required" class="form-control" placeholder="ΟΔΟΣ ΑΡΙΘΜΟΣ ΤΚ" />
+                    <label  class="control-label">ΔΙΕΥΘΥΝΣΗ</label>
+                    <div class="row">
+                        <div class="col">      
+                        <label for="addressStreet" class="control-label">ΟΔΟΣ</label>           
+                        <input id="addressStreet" name="addressStreet" maxlength="55" type="text" required="required" class="form-control" placeholder="ΟΔΟΣ" />
+                        </div>
+                        <div class="col">      
+                        <label for="addressNO" class="control-label">ΑΡΙΘΜΟΣ</label>           
+                        <input id="addressNO" name="addressNO" maxlength="55" type="text" required="required" class="form-control" placeholder="ΑΡΙΘΜΟΣ" />
+                        </div>
+                        <div class="col">      
+                        <label for="addressPC" class="control-label">T.K.</label>           
+                        <input id="addressPC" name="addressPC" maxlength="55" type="text" required="required" class="form-control" placeholder="ΤΚ" />
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group mb-4">
                     <label for="content" class="form-label">ΔΗΛΩΝΩ ΟΤΙ:</label>
