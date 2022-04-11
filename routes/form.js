@@ -84,6 +84,7 @@ router.get('/ypedhl',(req,res)=>{
 router.post('/ypedhl',(req,res)=>{
   let createdDate =`${moment().format('L')}`;
   let createdFileDate =`${moment().format('L')} ${moment().format('LT')}`;
+  let bdate = req.body.bdateDD+'/'+req.body.bdateMM+'/'+req.body.bdateYY ;
   let newData = {
     app: "aff",
     to: req.body.to,
@@ -91,12 +92,14 @@ router.post('/ypedhl',(req,res)=>{
     lname: req.body.lname,
     fatherFname: req.body.fatherFname,
     motherFname: req.body.motherFname,
-    bdate: `%{req.body.bdateDD}//%{req.body.bdateMM}//%{req.body.bdateYY}`,
+    bdate: bdate,
     blocation: req.body.blocation,
     passportID: req.body.passportID,
     phone: req.body.phone,
     city: req.body.city,
-    address: `%{req.body.addressStreet}//%{req.body.addressNO}//%{req.body.addressPC}`,
+    addressStreet:req.body.addressStreet,
+    addressNO:req.body.addressNO,
+    addressPC:req.body.addressPC,
     content: req.body.content,
     id: uuidv4(),
     createdDate: createdDate,

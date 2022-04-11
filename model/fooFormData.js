@@ -20,9 +20,12 @@ let applicationData = [
     bdate: "09/12/1989",
     blocation: "ΒΟΛΟΣ",
     passportID: "AM 4812",
-    phone: "",
+    phone: "6988765432",
     city: "ΑΘΗΝΑ",
     address: "ΜΑΓΝΗΣΙΑΣ 1 32129",
+    addressStreet: "ΜΑΓΝΗΣΙΑΣ",
+    addressNO:"1",
+    addressPC:"32129",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fugiat autem unde accusamus aperiam! Assumenda, fugiat, maxime cupiditate exercitationem laborum sit beatae quidem asperiores, quos iure vel accusantium consequuntur fugit?",
     createdDate: "11/2/2020",
@@ -44,6 +47,9 @@ let applicationData = [
     createdBy: "ΑΘΑΝΑΣΙΟΣ ΔΙΑΚΟΣ",
     city: "ΑΘΗΝΑ",
     address: "ΜΑΓΝΗΣΙΑΣ 1 32129",
+    addressStreet: "ΜΑΓΝΗΣΙΑΣ",
+    addressNO:"1",
+    addressPC:"32129",
     // to auth
     // gentle:req.body.gentle, select fix
     AuthfullName: "ΑΡΙΣΤΟΤΕΛΗΣ ΠΑΚΚΑΣ",
@@ -56,6 +62,9 @@ let applicationData = [
     AuthcreatedBy: "ΑΡΙΑΝΔΗ ΠΑΠΑΚΩΣΤΑ",
     Authcity: "ΘΕΣΣΑΛΟΝΙΚΗ",
     Authaddress: "ΘΕΡΜΗΣ 11 23231",
+    AuthaddressStreet: "ΜΑΓΝΗΣΙΑΣ",
+    AuthaddressNO:"1",
+    AuthaddressPC:"32129",
     content:
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio fugiat autem unde accusamus aperiam! Assumenda, fugiat, maxime cupiditate exercitationem laborum sit beatae quidem asperiores, quos iure vel accusantium consequuntur fugit?",
   },
