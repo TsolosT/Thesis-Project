@@ -4,7 +4,7 @@ A web application to apply forms with speech functionality from people with spec
 
 ## Description
 
-A Thesis project under the supervision [@IHU-Department of Computer, Informatics and Telecommunications Engineering (Serres)](http://ict.ihu.gr/). Is a web based application for apply forms with voice functionality. It uses Speech to text libraries to recognize speech and record it to convert it to text eventualy.
+A Thesis project under the supervision [IHU-Department of Computer, Informatics and Telecommunications Engineering (Serres)](http://ict.ihu.gr/). Is a web based application for apply forms with voice functionality. It uses Speech to text libraries to recognize speech and record it to convert it to text eventualy.
 
 ## Getting Started
 
@@ -14,7 +14,7 @@ A Thesis project under the supervision [@IHU-Department of Computer, Informatics
 
 ### Installing
 
-* First, [@Clone](https://github.com/TsolosT/Thesis-Project.git)  or  download it as zip (check above)
+* First, [Clone](https://github.com/TsolosT/Thesis-Project.git)  or  download it as zip (check above)
 * Then go to project folder  and `npm install `
 ### Executing program
 
@@ -79,4 +79,4 @@ A Thesis project under the supervision [@IHU-Department of Computer, Informatics
     * Initial Release
 ## License
 
-This project is licensed under the [@MIT](https://github.com/TsolosT/Thesis-Project/blob/main/LICENSE) License - see the LICENSE.md file for details
+This project is licensed under the [MIT](https://github.com/TsolosT/Thesis-Project/blob/main/LICENSE) License - see the LICENSE.md file for details
