@@ -6,14 +6,19 @@ body {
   height: 100%;
   width: 100%; 
 }
+:root
+{
+    --primary-color: #17A2B8;
+    --dark-color: #0c0c0c;
+}
 body{
-    background-color:#343A40;
+    background-color:#f3f3f3;
     font-family: "Roboto";
 }
 /* nav */
 .dropdown-item:focus, .dropdown-item:hover
 {
-    background-color:#17A2B8;
+    background-color: var(--primary-color);
 }
 .text-light-sec
 {
@@ -27,16 +32,17 @@ body{
 }
 /* microphone icon */
 .bi-mic-icon{
-    color:#17A2B8;
+    color:var(--primary-color);
     font-size:1.03rem;
 }
 /* Footer */
 footer hr{
-    height: 3px!important;
-    color:#f2f2f2;
+    height: 2px!important;
+    border-radius: 10px;
+    color:var(--dark-color);
 }
-.attribution { margin-top:40px; font-size: 16px; text-align: center; color:#f2f2f2;}
-.attribution a { color: #17A2B8; }
+.attribution { margin-top:40px; font-size: 16px; text-align: center; color:#0c0c0c73;}
+.attribution a { color: var(--primary-color); }
 /* ERROR PAGE */
 .svg-full{
     width: 100%;
@@ -106,4 +112,18 @@ input:focus-visible,textarea:focus-visible {
     font-size: 1.2rem;
     color: #e64427;
     margin-top: 35px;
+}
+.bg-dark {
+    background-color: #ffffff!important;
+}
+
+.text-dark {color:#0c0c0c!important;}
+@media screen and (max-width:580px)
+{
+    #home h1 {font-size:22px!important;}
+    #home span {font-size:14px!important;}
+    #home p {font-size:16px!important;}
+
+    .card {width:284px!important;}
+    div.form-box{width: 18rem!important;height: 100%;}
 }
