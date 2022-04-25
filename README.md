@@ -10,18 +10,14 @@ A Thesis project under the supervision [IHU-Department of Computer, Informatics 
 
 ### Dependencies
 
-* Node.js ,need to have before try run the application
+* Node.js, need to have before try run the application
 
-### Installing
-
-* First, [Clone](https://github.com/TsolosT/Thesis-Project.git)  or  download it as zip (check above)
-* Then go to project folder  and `npm install `
 ### Run Locally
 
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/TsolosT/Thesis-Project.git
 ```
 
 Go to the project directory
