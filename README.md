@@ -23,7 +23,7 @@ A Thesis project under the supervision [IHU-Department of Computer, Informatics 
 * Open your browser at localhost and navigate with tab key and enter to open an link 
 * Navigate to forms inputs, then press enter speak when you pause press tab to navigate to next input , repeat till the end of the form
 
-## Help
+## Tips
 
 * Speak steadily and slowly to get the most out of speech recognition.
 
