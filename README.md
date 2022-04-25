@@ -16,11 +16,31 @@ A Thesis project under the supervision [IHU-Department of Computer, Informatics 
 
 * First, [Clone](https://github.com/TsolosT/Thesis-Project.git)  or  download it as zip (check above)
 * Then go to project folder  and `npm install `
-### Executing program
+### Run Locally
 
-* Go to root folder of the project
-* Run `node app.js` or `nodemon` (if you have nodemon installed)
-* Open your browser at localhost and navigate with tab key and enter to open an link 
+Clone the project
+
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
 * Navigate to forms inputs, then press enter speak when you pause press tab to navigate to next input , repeat till the end of the form
 
 ## Tips
